@@ -10,9 +10,19 @@ class Solution(object):
             s.insert(i,movedChar) #Inserts popped character to provided index
         print(s) #To show string is being reversed
 
-#Testing code works
+###Testing code works correctly
 solution1 = Solution()
-solution1.reverseString(["h","e","l","l","o"])
-solution1.reverseString(["1","2","3","4","5"])
-solution1.reverseString(["H","a","n","n","a","h"])
-solution1.reverseString(["h","i"," ","h","o","w"," ","a","r","e"," ","y","o","u"])
+print("Testing reverseString()...",end="")
+s = ["h","e","l","l","o"]
+solution1.reverseString(s)
+assert(s == ["o","l","l","e","h"])
+s = ["1","2","3","4","5"]
+solution1.reverseString(s)
+assert(s == ["5","4","3","2","1"])
+s = ["H","a","n","n","a","h"]
+solution1.reverseString(s)
+assert(s == ["h","a","n","n","a","H"])
+s = ["h","i"," ","h","o","w"," ","a","r","e"," ","y","o","u"]
+solution1.reverseString(s)
+assert(s == ["u","o","y"," ","e","r","a"," ","w","o","h"," ","i","h"])
+print("Passed!")
